@@ -1,6 +1,6 @@
 # Strapi plugin `map-field`
 
-The `map-field` [Strapi](https://strapi.io/) plugin allows to add a [Mapbox](https://www.mapbox.com/) map as a field in your admin panel. 
+The `map-field` [Strapi](https://strapi.io/) plugin allows to add a [Mapbox](https://www.mapbox.com/) map custom field in your content-types. 
 
 ![Map Field](./map-field.png)
 
@@ -100,7 +100,7 @@ STRAPI_ADMIN_MAPBOX_ACCESS_TOKEN=pk.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 
-## Add a json field and enable the module
+## Add a json field and enable the plugin
 
 In order for the map to replace the JSON field in the Admin Panel, you need to enable the plugin on that JSON field in your content-type definition.
 
