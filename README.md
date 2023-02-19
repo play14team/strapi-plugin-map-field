@@ -93,6 +93,46 @@ module.exports = ({ env }) => ({
 
 ```
 
+## Update the security middleware configuration
+
+In order for the map to be displayed properly, you will need to update the `strapi::security` middleware configuration.
+
+For that, open `config/middlewares.js` and add the directive `'worker-src': ['blob:']` to the `contentSecurityPolicy` directives under `strapi::security`.
+
+The whole file should look somewhat like this:
+```js
+module.exports = ({
+  env
+}) => [
+  'strapi::errors',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'script-src': ["'self'", "'unsafe-inline'", 'cdn.jsdelivr.net'],
+          'img-src': ["'self'", 'data:', 'blob:' ],
+          'media-src': ["'self'", 'data:', 'blob:'],
+          'worker-src': ['blob:'],
+          upgradeInsecureRequests: null,
+        },
+      }
+    },
+  },
+  'strapi::cors',
+  'strapi::poweredBy',
+  'strapi::logger',
+  'strapi::query',
+  'strapi::body',
+  'strapi::session',
+  'strapi::favicon',
+  'strapi::public',
+];
+```
+
+
 ## Provide a valid Mapbox Access Token
 
 Add a valid [Mapbox Access Token](https://docs.mapbox.com/help/getting-started/access-tokens/) as an environment variable in your `.env` file
