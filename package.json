@@ -1,0 +1,39 @@
+{
+  "name": "map-field",
+  "version": "0.1.0",
+  "description": "Strapi plugin for a map custom field",
+  "repository": "https://github.com/play14team/strapi-plugin-map-field.git",
+  "strapi": {
+    "name": "map-field",
+    "description": "Strapi plugin that implements a Mapbox custom field",
+    "kind": "plugin",
+    "displayName": "Map Field"
+  },
+  "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^5.0.1",
+    "@mapbox/mapbox-sdk": "^0.15.0",
+    "mapbox-gl": "^2.12.0",
+    "react-map-gl": "^7.0.21"
+  },
+  "author": {
+    "name": "Cédric Pontet",
+    "email": "cedric@play14.org"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^4.6.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "strapi",
+    "strapi-plugin",
+    "plugin",
+    "mapbox"
+  ]
+}
