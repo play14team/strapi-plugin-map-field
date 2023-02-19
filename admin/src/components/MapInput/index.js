@@ -5,7 +5,7 @@ import Map, {FullscreenControl, GeolocateControl, Marker, NavigationControl} fro
 import GeocoderControl from './geocoder-control';
 import mbxGeocoding from '@mapbox/mapbox-sdk/services/geocoding'
 
-import '../../../../node_modules/mapbox-gl/dist/mapbox-gl.css';
+import 'https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css';
 
 const TOKEN = process.env.STRAPI_ADMIN_MAPBOX_ACCESS_TOKEN
 
