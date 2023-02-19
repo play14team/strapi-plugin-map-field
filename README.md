@@ -64,6 +64,7 @@ The field will actually be stored as [GeoJSON](https://geojson.org/) in a JSON f
 This plugin was inspired by
 * [Customizing fields in the Strapi admin panel by Cyril Lopez](https://www.youtube.com/watch?v=55KJ2sCX8ws)
 * [How to Create a Custom Admin UI Field Component in Strapi](https://medium.com/@dallasclark/how-to-create-a-custom-admin-ui-field-component-in-strapi-2c9cd367f262)
+* [Custom fields in Strapi documentation](https://docs.strapi.io/developer-docs/latest/development/custom-fields.html)
 
 It uses the following npm packages
 * [mapbox-gl](https://www.npmjs.com/package/mapbox-gl)
@@ -144,53 +145,13 @@ STRAPI_ADMIN_MAPBOX_ACCESS_TOKEN=pk.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 
-## Enable the plugin on a JSON field in your content-type
+## Add a map field to your content type
 
-In order for the map to replace the default JSON field editor in the Admin Panel, you need to enable the plugin on that JSON field in your content-type definition.
+In the content type builder
+* Click on `Add another field`
+* Select the `Custom` tab
+* Select the `Map` field
+* Type a name for the field
+* Click `Finish`
 
-This can be done by manually editing the content-type file and adding a `pluginOptions` section.
-
-Let's imagine that you have a content-type collection called `dummy` with a JSON field called `location`.
-
-```js
-// in your content-type definition
-{
-  "kind": "collectionType",
-  "collectionName": "dummy",
-
-  ...
-
-  "location": {
-      "type": "json"
-    }
-  }
-}
-
-```
-
-Simply add the `pluginOptions` as follow: 
-
-```js
-// in your content-type definition
-{
-  "kind": "collectionType",
-  "collectionName": "dummy",
-
-  ...
-
-  "location": {
-      "type": "json",
-      "pluginOptions": {
-        "map-field": {
-          "enabled": true
-        }
-      }
-    }
-  }
-}
-
-```
-
-Above, `map-field` corresponds to this plugin name. You cannot change that, otherwise it will not work.
-
-You can disable the plugin at any moment by setting the `enabled` flag to `false`. This will display the default JSON field again, instead of the map.
+![Add map field to content type](./add-map-field.png)

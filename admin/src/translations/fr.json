@@ -1,1 +1,4 @@
-{}
+{
+  "map-field.label": "Carte",
+  "map-field.description": "Un champ carte utilisant Mapbox"
+}
