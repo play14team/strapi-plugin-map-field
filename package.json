@@ -1,11 +1,11 @@
 {
-  "name": "map-field",
+  "name": "strapi-plugin-map-field",
   "version": "1.0.0",
   "description": "Strapi plugin for a map custom field",
   "repository": "https://github.com/play14team/strapi-plugin-map-field.git",
   "strapi": {
     "name": "map-field",
-    "description": "Strapi plugin that implements a Mapbox custom field",
+    "description": "Strapi plugin that provides a Mapbox custom field",
     "kind": "plugin",
     "displayName": "Map Field"
   },
