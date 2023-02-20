@@ -72,6 +72,18 @@ It uses the following npm packages
 * [@mapbox/mapbox-sdk](https://www.npmjs.com/package/@mapbox/mapbox-sdk)
 * [@mapbox/mapbox-gl-geocoder](https://www.npmjs.com/package/@mapbox/mapbox-gl-geocoder)
 
+## Install the plugin
+
+To install this plugin, you need to add an NPM dependency to your Strapi application:
+
+```sh
+# Using Yarn
+yarn add strapi-plugin-map-field
+
+# Or using NPM
+npm install strapi-plugin-map-field
+```
+
 ## Configure the plugin
 
 You need to enable the plugin in your Strapi plugins configuration.
