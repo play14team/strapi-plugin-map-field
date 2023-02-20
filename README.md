@@ -110,7 +110,7 @@ module.exports = ({ env }) => ({
 
 In order for the map to be displayed properly, you will need to update the `strapi::security` middleware configuration.
 
-For that, open `config/middlewares.js` and add the directive `'worker-src': ['blob:']` to the `contentSecurityPolicy` directives under `strapi::security`.
+For that, open `config/middlewares.js` and add the directive `'worker-src': ['blob:']` to the `contentSecurityPolicy` directives under `strapi::security`. You also need to add `api.mapbox.com` in the `script-src`.
 
 The whole file should look somewhat like this:
 ```js
@@ -125,7 +125,7 @@ module.exports = ({
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'script-src': ["'self'", "'unsafe-inline'", 'cdn.jsdelivr.net'],
+          'script-src': ["'self'", "'unsafe-inline'", 'cdn.jsdelivr.net', 'api.mapbox.com'],
           'img-src': ["'self'", 'data:', 'blob:' ],
           'media-src': ["'self'", 'data:', 'blob:'],
           'worker-src': ['blob:'],
