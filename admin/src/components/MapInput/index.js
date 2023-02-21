@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useIntl } from 'react-intl';
-import { Stack, Typography, TextInput, Grid, GridItem } from '@strapi/design-system';
+import { Stack, Typography, TextInput, Grid, GridItem, Status } from '@strapi/design-system';
 import Map, {FullscreenControl, GeolocateControl, Marker, NavigationControl} from 'react-map-gl';
 import GeocoderControl from './geocoder-control';
 import mbxGeocoding from '@mapbox/mapbox-sdk/services/geocoding'
@@ -15,6 +15,12 @@ const MapField = ({
   onChange,
   value
 }) => {
+
+  if (!TOKEN) {
+    return (<Status variant="danger" showBullet={false}>
+             <Typography fontWeight="bold">Map field cannot be displayed! </Typography> <Typography>Mapbox access token not found. Please add a STRAPI_ADMIN_MAPBOX_ACCESS_TOKEN environment variable and set it with a valid Mapbox api token.</Typography>
+           </Status>)
+  }
 
   const { formatMessage } = useIntl();
   const result = JSON.parse(value);
