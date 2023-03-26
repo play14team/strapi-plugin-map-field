@@ -23,7 +23,7 @@ const MapField = ({
   }
 
   const { formatMessage } = useIntl();
-  const result = JSON.parse(value);
+  const result = value && JSON.parse(value) || null;
   const isDefaultViewState = (result == null)
 
   const [longitude, setLongitude] = useState(result && result.geometry.coordinates[0] || null);
@@ -58,6 +58,7 @@ const MapField = ({
   }
 
   const updateValues = (result) => {
+    if (!result) return;
     const value = JSON.stringify(result);
 
     setAddress(result.place_name);
