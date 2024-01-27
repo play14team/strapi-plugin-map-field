@@ -1,0 +1,7 @@
+{
+  "map-field.label": "Karte",
+  "map-field.description": "Eine Kartenkomponente, basierend auf Mapbox",
+  "map-field.fields.address": "Adresse",
+  "map-field.fields.longitude": "Längengrad",
+  "map-field.fields.latitude": "Breitengrad"
+}
