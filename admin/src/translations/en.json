@@ -1,4 +1,7 @@
 {
   "map-field.label": "Map",
-  "map-field.description": "A map custom field using Mapbox"
+  "map-field.description": "A map custom field using Mapbox",
+  "map-field.fields.address": "address",
+  "map-field.fields.longitude": "longitude",
+  "map-field.fields.latitude": "latitude"
 }

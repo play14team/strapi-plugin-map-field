@@ -103,13 +103,29 @@ const MapField = ({
 
     <Grid>
       <GridItem padding={1} col={8} xs={12}>
-        <TextInput label="address" name="address" value={address} disabled />
+        <TextInput label={formatMessage({
+          id: getTranslation(
+            'map-field.fields.address'
+          ),
+          defaultMessage: 'address',
+        })} name="address" value={address} disabled
+      />
       </GridItem>
       <GridItem padding={1} col={2} xs={12}>
-        <TextInput label="longitude" name="longitude" value={longitude} disabled />
+        <TextInput label={formatMessage({
+          id: getTranslation(
+            'map-field.fields.longitude'
+          ),
+          defaultMessage: 'longitude',
+        })} name="longitude" value={longitude} disabled />
       </GridItem>
       <GridItem padding={1} col={2} xs={12}>
-        <TextInput label="latitude" name="latitude" value={latitude} disabled />
+        <TextInput label={formatMessage({
+          id: getTranslation(
+            'map-field.fields.latitude'
+          ),
+          defaultMessage: 'latitude',
+        })} name="latitude" value={latitude} disabled />
       </GridItem>
     </Grid>
   </Stack>
