@@ -4,6 +4,7 @@ import { Stack, Typography, TextInput, Grid, GridItem, Status } from '@strapi/de
 import Map, {FullscreenControl, GeolocateControl, Marker, NavigationControl} from 'react-map-gl';
 import GeocoderControl from './geocoder-control';
 import mbxGeocoding from '@mapbox/mapbox-sdk/services/geocoding'
+import getTranslation from '../../utils/getTrad';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -103,13 +104,29 @@ const MapField = ({
 
     <Grid>
       <GridItem padding={1} col={8} xs={12}>
-        <TextInput label="address" name="address" value={address} disabled />
+        <TextInput label={formatMessage({
+          id: getTranslation(
+            'fields.address'
+          ),
+          defaultMessage: 'address',
+        })} name="address" value={address} disabled
+      />
       </GridItem>
       <GridItem padding={1} col={2} xs={12}>
-        <TextInput label="longitude" name="longitude" value={longitude} disabled />
+        <TextInput label={formatMessage({
+          id: getTranslation(
+            'fields.longitude'
+          ),
+          defaultMessage: 'longitude',
+        })} name="longitude" value={longitude} disabled />
       </GridItem>
       <GridItem padding={1} col={2} xs={12}>
-        <TextInput label="latitude" name="latitude" value={latitude} disabled />
+        <TextInput label={formatMessage({
+          id: getTranslation(
+            'fields.latitude'
+          ),
+          defaultMessage: 'latitude',
+        })} name="latitude" value={latitude} disabled />
       </GridItem>
     </Grid>
   </Stack>
