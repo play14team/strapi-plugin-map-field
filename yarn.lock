@@ -44,12 +44,12 @@
   resolved "https://registry.yarnpkg.com/@mapbox/jsonlint-lines-primitives/-/jsonlint-lines-primitives-2.0.2.tgz#ce56e539f83552b58d10d672ea4d6fc9adc7b234"
   integrity sha512-rY0o9A5ECsTQRVhv7tL/OyDpGAoUB4tTvLiW1DSzQGq4bvTPhNw1VpSNjDJc5GFZ2XuyOtSWSVN05qOtcD71qQ==
 
-"@mapbox/mapbox-gl-geocoder@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-gl-geocoder/-/mapbox-gl-geocoder-5.0.2.tgz#f7409023a667e4d092c2b1d640a088ce5c735cbe"
-  integrity sha512-o+2atyKKsfbiI2/iutQ/razt5O++kfi9oxwaXSfKc6m/9NudJnQm3rpGB0GagA+becq2NU4U99E9Yzv+UcMCBQ==
+"@mapbox/mapbox-gl-geocoder@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-gl-geocoder/-/mapbox-gl-geocoder-5.0.3.tgz#329de36564b45c029218d66d5d861fe0131f85c5"
+  integrity sha512-aeu2ZM+UKoMUGqqKy4UVVEKsIaNj2KSsiQ4p4YbNSAjZj2vcP33KSod+DPeRwhvoY+MU6KgyvdZ/1xdmH+C62g==
   dependencies:
-    "@mapbox/mapbox-sdk" "^0.13.7"
+    "@mapbox/mapbox-sdk" "^0.16.1"
     events "^3.3.0"
     lodash.debounce "^4.0.6"
     nanoid "^3.1.31"
@@ -62,10 +62,10 @@
   resolved "https://registry.yarnpkg.com/@mapbox/mapbox-gl-supported/-/mapbox-gl-supported-3.0.0.tgz#bebd3d5da3c1fd988011bb79718a39f63f5e16ac"
   integrity sha512-2XghOwu16ZwPJLOFVuIOaLbN0iKMn867evzXFyf0P22dqugezfJwLmdanAgU25ITvz1TvOfVP4jsDImlDJzcWg==
 
-"@mapbox/mapbox-sdk@^0.13.7":
-  version "0.13.7"
-  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-sdk/-/mapbox-sdk-0.13.7.tgz#05e1bf287d86868623d748c19865b1fee7222642"
-  integrity sha512-JZjBsAVSBv7lX7gQPOQwftBGHIUcvL/tPKFxAL+SCT7u1n+eRH052XebOTkl28pNm7Du6DpKAs1GvgUnDcFFDQ==
+"@mapbox/mapbox-sdk@^0.15.5":
+  version "0.15.5"
+  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-sdk/-/mapbox-sdk-0.15.5.tgz#1814142999cbdf35258bba63d53d4ed35bc4f94f"
+  integrity sha512-unxQvLZU4Sk+sNrZGzylCHXnC1FU3YZvmnHensoJjSPG1iOivV6LEIYwFScH+IodY0A3xx56kkeQ9QJBpWMpdg==
   dependencies:
     "@mapbox/fusspot" "^0.4.0"
     "@mapbox/parse-mapbox-token" "^0.2.0"
@@ -76,10 +76,10 @@
     is-plain-obj "^1.1.0"
     xtend "^4.0.1"
 
-"@mapbox/mapbox-sdk@^0.15.5":
-  version "0.15.5"
-  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-sdk/-/mapbox-sdk-0.15.5.tgz#1814142999cbdf35258bba63d53d4ed35bc4f94f"
-  integrity sha512-unxQvLZU4Sk+sNrZGzylCHXnC1FU3YZvmnHensoJjSPG1iOivV6LEIYwFScH+IodY0A3xx56kkeQ9QJBpWMpdg==
+"@mapbox/mapbox-sdk@^0.16.1":
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-sdk/-/mapbox-sdk-0.16.1.tgz#262dd1557043b2ef672ef2d76d887dbe9cc5f82a"
+  integrity sha512-dyZrmg+UL/Gp5mGG3CDbcwGSUMYYrfbd9hdp0rcA3pHSf3A9eYoXO9nFiIk6SzBwBVMzHENJz84ZHdqM0MDncQ==
   dependencies:
     "@mapbox/fusspot" "^0.4.0"
     "@mapbox/parse-mapbox-token" "^0.2.0"
