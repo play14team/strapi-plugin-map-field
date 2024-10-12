@@ -76,10 +76,10 @@
     is-plain-obj "^1.1.0"
     xtend "^4.0.1"
 
-"@mapbox/mapbox-sdk@^0.15.5":
-  version "0.15.5"
-  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-sdk/-/mapbox-sdk-0.15.5.tgz#1814142999cbdf35258bba63d53d4ed35bc4f94f"
-  integrity sha512-unxQvLZU4Sk+sNrZGzylCHXnC1FU3YZvmnHensoJjSPG1iOivV6LEIYwFScH+IodY0A3xx56kkeQ9QJBpWMpdg==
+"@mapbox/mapbox-sdk@^0.16.1":
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-sdk/-/mapbox-sdk-0.16.1.tgz#262dd1557043b2ef672ef2d76d887dbe9cc5f82a"
+  integrity sha512-dyZrmg+UL/Gp5mGG3CDbcwGSUMYYrfbd9hdp0rcA3pHSf3A9eYoXO9nFiIk6SzBwBVMzHENJz84ZHdqM0MDncQ==
   dependencies:
     "@mapbox/fusspot" "^0.4.0"
     "@mapbox/parse-mapbox-token" "^0.2.0"
