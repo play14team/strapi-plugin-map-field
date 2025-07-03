@@ -1,8 +1,15 @@
 # Strapi plugin `map-field`
 
-The `map-field` [Strapi](https://strapi.io/) plugin allows to add a [Mapbox](https://www.mapbox.com/) map custom field in your content-types. 
+The `map-field` [Strapi](https://strapi.io/) plugin allows to add a [Mapbox](https://www.mapbox.com/) map custom field in your content-types.
 
-![Map Field](./map-field.png)
+![Map Field](./assets/map-field.png)
+
+## Versions
+
+- v1.x.x is compatible with Strapi v4
+- v2.x.x is compatible with Strapi v5
+
+## Features
 
 You can use the seach box to pinpoint the location you are looking for. Alternatively, you can double-click anywhere on the map, which will put a marker on the closest geolocated point.
 
@@ -62,15 +69,17 @@ The field will actually be stored as [GeoJSON](https://geojson.org/) in a JSON f
 ```
 
 This plugin was inspired by
-* [Customizing fields in the Strapi admin panel by Cyril Lopez](https://www.youtube.com/watch?v=55KJ2sCX8ws)
-* [How to Create a Custom Admin UI Field Component in Strapi](https://medium.com/@dallasclark/how-to-create-a-custom-admin-ui-field-component-in-strapi-2c9cd367f262)
-* [Custom fields in Strapi documentation](https://docs.strapi.io/developer-docs/latest/development/custom-fields.html)
+
+- [Customizing fields in the Strapi admin panel by Cyril Lopez](https://www.youtube.com/watch?v=55KJ2sCX8ws)
+- [How to Create a Custom Admin UI Field Component in Strapi](https://medium.com/@dallasclark/how-to-create-a-custom-admin-ui-field-component-in-strapi-2c9cd367f262)
+- [Custom fields in Strapi documentation](https://docs.strapi.io/developer-docs/latest/development/custom-fields.html)
 
 It uses the following npm packages
-* [mapbox-gl](https://www.npmjs.com/package/mapbox-gl)
-* [react-map-gl](https://www.npmjs.com/package/react-map-gl)
-* [@mapbox/mapbox-sdk](https://www.npmjs.com/package/@mapbox/mapbox-sdk)
-* [@mapbox/mapbox-gl-geocoder](https://www.npmjs.com/package/@mapbox/mapbox-gl-geocoder)
+
+- [mapbox-gl](https://www.npmjs.com/package/mapbox-gl)
+- [react-map-gl](https://www.npmjs.com/package/react-map-gl)
+- [@mapbox/mapbox-sdk](https://www.npmjs.com/package/@mapbox/mapbox-sdk)
+- [@mapbox/mapbox-gl-geocoder](https://www.npmjs.com/package/@mapbox/mapbox-gl-geocoder)
 
 ## Install the plugin
 
@@ -82,6 +91,9 @@ yarn add strapi-plugin-map-field
 
 # Or using NPM
 npm install strapi-plugin-map-field
+
+# Or using pnpm
+pnpm install strapi-plugin-map-field
 ```
 
 ## Configure the plugin
@@ -91,7 +103,7 @@ You need to enable the plugin in your Strapi plugins configuration.
 Open `config/plugins.js` and add the following:
 
 ```js
-// config/plugins.js
+// config/plugins.js|ts
 module.exports = ({ env }) => ({
 
   ...
@@ -113,10 +125,9 @@ In order for the map to be displayed properly, you will need to update the `stra
 For that, open `config/middlewares.js` and add the directive `'worker-src': ['blob:']` to the `contentSecurityPolicy` directives under `strapi::security`. You also need to add `api.mapbox.com` in the `script-src`.
 
 The whole file should look somewhat like this:
+
 ```js
-module.exports = ({
-  env
-}) => [
+module.exports = ({ env }) => [
   'strapi::errors',
   {
     name: 'strapi::security',
@@ -126,12 +137,12 @@ module.exports = ({
         directives: {
           'connect-src': ["'self'", 'https:'],
           'script-src': ["'self'", "'unsafe-inline'", 'cdn.jsdelivr.net', 'api.mapbox.com'],
-          'img-src': ["'self'", 'data:', 'blob:' ],
+          'img-src': ["'self'", 'data:', 'blob:'],
           'media-src': ["'self'", 'data:', 'blob:'],
           'worker-src': ['blob:'],
           upgradeInsecureRequests: null,
         },
-      }
+      },
     },
   },
   'strapi::cors',
@@ -145,7 +156,6 @@ module.exports = ({
 ];
 ```
 
-
 ## Provide a valid Mapbox Access Token
 
 Add a valid [Mapbox Access Token](https://docs.mapbox.com/help/getting-started/access-tokens/) as an environment variable in your `.env` file
@@ -156,14 +166,14 @@ STRAPI_ADMIN_MAPBOX_ACCESS_TOKEN=pk.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ```
 
-
 ## Add a map field to your content type
 
 In the content type builder
-* Click on `Add another field`
-* Select the `Custom` tab
-* Select the `Map` field
-* Type a name for the field
-* Click `Finish`
 
-![Add map field to content type](./add-map-field.png)
+- Click on `Add another field`
+- Select the `Custom` tab
+- Select the `Map` field
+- Type a name for the field
+- Click `Finish`
+
+![Add map field to content type](./assets/add-map-field.png)
